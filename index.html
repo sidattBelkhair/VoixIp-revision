@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>🎁 Supnum Gift</title>
+  <link rel="stylesheet" href="lock.css">
+</head>
+<body>
+  <div id="main">
+    <h1>🎓 Supnum Students</h1>
+    <p>هدية حصرية لطلاب الأمن السيبراني</p>
+    <button onclick="activateLock()">🎁 افتح الهدية</button>
+  </div>
+
+  <div id="lockscreen" style="display:none;">
+    <h2>🔒 جهازك مقفل</h2>
+    <p>أدخل رمز فك القفل للمتابعة</p>
+    <input type="password" id="unlockCode" placeholder="••••••">
+    <button onclick="checkCode()">🔓 فتح</button>
+    <p id="msg"></p>
+  </div>
+
+  <script src="lock.js"></script>
+</body>
+</html>
