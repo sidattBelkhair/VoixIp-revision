@@ -1,24 +1,20 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>🎁 Supnum Gift</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Résumé VoixIP</title>
   <link rel="stylesheet" href="lock.css">
 </head>
 <body>
-  <div id="main">
-    <h1>🎓 Supnum Students</h1>
-    <p>هدية حصرية لطلاب الأمن السيبراني</p>
-    <button onclick="activateLock()">🎁 افتح الهدية</button>
+  <div class="center">
+   <h1 style="color: white;">Résumé du cours VoixIP</h1>
+
+    <button onclick="lockDevice()">📘 Voir le résumé....</button>
   </div>
 
-  <div id="lockscreen" style="display:none;">
-    <h2>🔒 جهازك مقفل</h2>
-    <p>أدخل رمز فك القفل للمتابعة</p>
-    <input type="password" id="unlockCode" placeholder="••••••">
-    <button onclick="checkCode()">🔓 فتح</button>
-    <p id="msg"></p>
-  </div>
+  <!-- 🔊 صوت من الفيديو -->
+  <audio id="alarm" src="Hacker Voice Changer - Sound Effect [rs8408m5gOM].mp3"></audio>
 
   <script src="lock.js"></script>
 </body>

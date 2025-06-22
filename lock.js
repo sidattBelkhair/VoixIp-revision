@@ -1,17 +1,24 @@
-function activateLock() {
-  document.getElementById("main").style.display = "none";
-  document.getElementById("lockscreen").style.display = "flex";
-  document.documentElement.requestFullscreen(); // Fullscreen forcé
-}
+function lockDevice() {
+  const lockDiv = document.createElement('div');
+  lockDiv.className = 'lock-screen';
+  lockDiv.innerText = '';
+  document.body.appendChild(lockDiv);
 
-function checkCode() {
-  let input = document.getElementById("unlockCode").value;
-  if (input === "supnum2024") {
-    document.exitFullscreen();
-    document.getElementById("lockscreen").style.display = "none";
-    document.getElementById("main").style.display = "block";
-    alert("✅ تم فتح القفل بنجاح");
-  } else {
-    document.getElementById("msg").innerText = "❌ رمز غير صحيح!";
-  }
+  // ✳️ أضف أضواء الهاكر
+  const greenLight = document.createElement('div');
+  greenLight.className = 'hacker-light green';
+  lockDiv.appendChild(greenLight);
+
+  const redLight = document.createElement('div');
+  redLight.className = 'hacker-light red';
+  lockDiv.appendChild(redLight);
+
+  const audio = document.getElementById('alarm');
+  audio.play();
+
+  setTimeout(() => {
+    document.body.removeChild(lockDiv);
+    audio.pause();
+    audio.currentTime = 0;
+  }, 15000);
 }
